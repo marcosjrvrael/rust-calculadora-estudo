@@ -59,8 +59,6 @@ fn main() {
 
     loop {
 
-        let mut opt = String::new();
-
         println!("Escolha a operação que deseja fazer: \n
         1 - soma\n
         2 - subtração\n
@@ -68,9 +66,7 @@ fn main() {
         4 - divisão\n
         5 - sair");
 
-        io::stdin()
-                .read_line(&mut opt)
-                .expect("Failed to read line");
+        let opt = user_input();
 
         let opt: i32 = opt.trim().parse().expect("Inteiro");
 
